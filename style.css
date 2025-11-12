@@ -5,9 +5,12 @@
 }
 
 header {
-  background-color: #f8b400;
+  background-color: #751b1b;
   color: white;
   height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header h1 {
@@ -34,4 +37,25 @@ nav ul li{
 
 img{
   width: 150px;
+  display: flex;
+  align-items: center;
+}
+
+h2{
+  font-family: "Poppins", sans-serif;
+}
+
+p{
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.sobre-nos{
+  width: 100%;
+  text-align: center;
+
+}
+
+.paragrafo-texto{
+  font-size: 20px;
+  text-align: justify;
 }
