@@ -35,10 +35,12 @@ nav ul li{
   margin: 0 15px;
 }
 
-img{
+img {
   width: 150px;
-  display: flex;
-  align-items: center;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
 }
 
 h2{
@@ -49,13 +51,61 @@ p{
   font-family: "Nunito Sans", sans-serif;
 }
 
-.sobre-nos{
-  width: 100%;
-  text-align: center;
+.texto-menu{
+  text-decoration: none;
+  color: #fff;
+}
 
+.sobre-nos{
+  width: 95%;
+  text-align: center;
+  padding: 20px;
 }
 
 .paragrafo-texto{
   font-size: 20px;
   text-align: justify;
+}
+
+.itens-cardapio {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item{
+  padding: 10px;
+  margin-left: 30px;
+  box-shadow: #424242 1px 1px 8px;
+  border-radius: 10px;
+  width: 250px;
+  height: 260px;
+
+}
+
+.descricao{
+  margin-bottom:10px;
+  color:  #555;
+}
+
+.img-item{
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h3{
+  margin-bottom: 10px;
+  color: #f8b400;
+  font-size: 18px;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
