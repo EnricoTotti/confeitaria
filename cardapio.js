@@ -28,7 +28,7 @@ function criarItemCardapio(titulo, descricao, foto){
 async function fetchBolos() {
     try {
         // URL da sua API Flask
-        const resposta = await fetch("http://127.0.0.1:3000/cardapio");
+        const resposta = await fetch("https://confeitaria-api-f305.onrender.com/cardapio");
 
         if (!resposta.ok) {
             throw new Error("Erro ao buscar dados do cardápio");
