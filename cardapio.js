@@ -24,11 +24,33 @@ function criarItemCardapio(titulo, descricao, foto){
     divC.appendChild(divItemCardapio)
 }
 
-criarItemCardapio(
-    'Bolo de chocolate',
-    'Bolo bom e gostosinho',
-    'https://assets.unileversolutions.com/recipes-v2/164246.jpg'
-)
+
+async function fetchBolos() {
+    try {
+        // URL da sua API Flask
+        const resposta = await fetch("http://127.0.0.1:3000/cardapio");
+
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar dados do cardápio");
+        }
+
+        const dados = await resposta.json(); // transforma em objeto JS
+
+        // Percorre cada item do cardápio
+        dados.forEach(item => {
+            criarItemCardapio(item.titulo, item.descricao, item.foto);
+        });
+
+    } catch (erro) {
+        console.error("Erro no fetch:", erro);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchBolos();
+});
+
+
 
 
 /*
